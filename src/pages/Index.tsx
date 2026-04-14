@@ -72,12 +72,14 @@ const Index = () => {
               type="E-commerce"
               description="Site de loja virtual inspirado no Mercado Livre, com listagem de produtos, página de detalhes, simulação de carrinho de compras e design responsivo."
               techs={["HTML", "CSS", "JavaScript"]}
+              link="https://marte687.github.io/DayBuy/index.html"
             />
             <ProjectCard
               title="Tabuada Online"
               type="Educacional"
               description="Aplicação web que gera automaticamente a tabuada de um número informado pelo usuário, com interface simples e intuitiva."
               techs={["HTML", "CSS", "JavaScript"]}
+              link="https://marte687.github.io/Tabuada/"
             />
           </div>
         </Section>
@@ -133,11 +135,14 @@ const TimelineItem = ({ title, subtitle, period, active }: { title: string; subt
   </div>
 );
 
-const ProjectCard = ({ title, type, description, techs }: { title: string; type: string; description: string; techs: string[] }) => (
-  <div className="glass-card p-5 sm:p-6 group hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_hsl(210_100%_56%/0.08)]">
+const ProjectCard = ({ title, type, description, techs, link }: { title: string; type: string; description: string; techs: string[]; link: string }) => (
+  <a href={link} target="_blank" rel="noopener noreferrer" className="glass-card p-5 sm:p-6 group hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_hsl(210_100%_56%/0.08)] block">
     <div className="flex items-center justify-between mb-2">
       <h3 className="font-semibold text-foreground group-hover:text-gradient transition-colors">{title}</h3>
-      <span className="text-xs px-2 py-0.5 rounded-md bg-primary/10 text-primary font-medium">{type}</span>
+      <div className="flex items-center gap-2">
+        <span className="text-xs px-2 py-0.5 rounded-md bg-primary/10 text-primary font-medium">{type}</span>
+        <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+      </div>
     </div>
     <p className="text-sm text-muted-foreground leading-relaxed mb-4">{description}</p>
     <div className="flex flex-wrap gap-1.5">
@@ -145,7 +150,7 @@ const ProjectCard = ({ title, type, description, techs }: { title: string; type:
         <span key={tech} className="text-xs px-2 py-0.5 rounded bg-secondary/80 text-secondary-foreground font-mono">{tech}</span>
       ))}
     </div>
-  </div>
+  </a>
 );
 
 export default Index;
