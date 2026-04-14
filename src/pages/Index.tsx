@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Github, GraduationCap, Code, Users, Globe, ExternalLink, Briefcase, Sparkles, Download } from "lucide-react";
+import { Mail, Phone, MapPin, Github, GraduationCap, Code, Users, Globe, ExternalLink, Briefcase, Sparkles } from "lucide-react";
 
 const Index = () => {
   return (
@@ -12,18 +12,9 @@ const Index = () => {
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         {/* Header */}
         <header className="animate-fade-up mb-16">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-sm font-medium text-accent">Disponível para oportunidades</span>
-            </div>
-            <button
-              onClick={() => window.print()}
-              className="print:hidden flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-            >
-              <Download className="w-4 h-4" />
-              Baixar PDF
-            </button>
+          <div className="flex items-center gap-2 mb-3">
+            <div className="h-2 w-2 rounded-full bg-accent animate-pulse" />
+            <span className="text-sm font-medium text-accent">Disponível para oportunidades</span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-3">
             Alexandre <span className="text-gradient">Gomes</span>
